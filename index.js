@@ -1,9 +1,20 @@
 const express=require('express');
-const PORT=8080;
+const PORT=8081;
 const app=express();
 
 app.use(express.json());
 
+const productsRoutes=require('./routes/products');
+
+//middlewares
+app.use("/api/products",productsRoutes);
+
+app.get('/',
+    (req,res)=>{
+        res.send("Hello this is my first api 🥰");
+
+    }
+);
 
 
 app.get(
@@ -35,7 +46,11 @@ app.post(
 );
 app.listen(
     PORT,
-    () => {
-        console.log(`Server is running on http://localhost:${PORT}`);
+    (err) => {
+        if (err) {
+            console.error('Error starting server:', err);
+            process.exit(1); // Exit the process with failure
+        }
+        console.log(`Server is running on http://localhost:${PORT}/`);
     }
 )
