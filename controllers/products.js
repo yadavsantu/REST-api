@@ -4,8 +4,9 @@ const ProductModel=require("../models/product");
 
 const getAllProducts=async(req,res)=>{
     const queryObject={};
+    
 
-    const {company, name, featured}=req.query;
+    const {company, name, featured, sort}=req.query;
     if(company){
         queryObject.company=company;
         // console.log(queryObject);
@@ -17,17 +18,23 @@ const getAllProducts=async(req,res)=>{
     if(featured){
         queryObject.featured=featured;
     }
+    let apiData=ProductModel.find(queryObject);
+    
+    if(sort){
+        let sortFix=sort.replace(","," ");
+        apiData=apiData.sort(sortFix);
+    }
 
     console.log(queryObject);
 
-    const myData=await ProductModel.find(queryObject);
+    const myData=await apiData;
     res.status(200).json({
         myData
     });
 }
 
 const getAllProductsTesting=async(req,res)=>{
-    const myData=await ProductModel.find(req.query);
+    const myData=await ProductModel.find(req.query).sort("price");
     console.log(
         req.query
     );
