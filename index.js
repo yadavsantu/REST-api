@@ -1,6 +1,8 @@
 const express=require('express');
-const PORT=8081;
+require('dotenv').config();
+const PORT=process.env.PORT || 8081;
 const app=express();
+const connectDB=require("./db/connect");
 
 app.use(express.json());
 
@@ -44,13 +46,19 @@ app.post(
     }
 
 );
-app.listen(
-    PORT,
-    (err) => {
-        if (err) {
-            console.error('Error starting server:', err);
-            process.exit(1); // Exit the process with failure
-        }
-        console.log(`Server is running on http://localhost:${PORT}/`);
+
+
+const start= async()=>{
+    try{
+        await connectDB(process.env.MONGODB_URI);
+        console.log("Connected to database");
+        app.listen(PORT,()=>{
+            console.log(`Server is running on http://localhost:${PORT}/`);
+        });
     }
-)
+    catch(error){
+        console.log(error);
+    }
+
+}
+start();
