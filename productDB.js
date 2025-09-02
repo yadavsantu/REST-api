@@ -9,6 +9,8 @@ const ProductJSON=require("./products.json");
 const start=async()=>{
     try{
         await connectDB(process.env.MONGODB_URI);
+        await ProductModel.deleteMany();
+        console.log("Old Product data deleted");
         await ProductModel.create(ProductJSON);
         console.log("Product data added successfully");
 
