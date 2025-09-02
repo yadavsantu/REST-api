@@ -1,27 +1,602 @@
 [
     {
-        "name":"iphone",
-        "price":154,
-        "featured":true,
-        "company":"Apple"
-
+        "name": "iPhone 12",
+        "price": 222.21,
+        "featured": true,
+        "company": "Apple"
     },
     {
-        "name":"samsung",
-        "price":200,
-        "featured":true,
-        "company":"Samsung"
+        "name": "iPhone 12 Pro",
+        "price": 319.05,
+        "featured": false,
+        "company": "Apple"
     },
     {
-        "name":"mi",
-        "price":300,
-        "featured":false,
-        "company":"MI"
+        "name": "iPhone 13",
+        "price": 561.09,
+        "featured": true,
+        "company": "Apple"
     },
     {
-        "name":"dell",
-        "price":400,
-        "featured":true,
-        "company":"Dell"
+        "name": "iPhone 14",
+        "price": 739.61,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14 Pro",
+        "price": 903.47,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 15",
+        "price": 964.59,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "Samsung Galaxy S20",
+        "price": 732.1,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S21",
+        "price": 755.39,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S22",
+        "price": 875.41,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S23",
+        "price": 1047.52,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Note 20",
+        "price": 885.66,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Flip 3",
+        "price": 1216.71,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Fold 4",
+        "price": 1797.25,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Google Pixel 6",
+        "price": 600.05,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 6 Pro",
+        "price": 904.49,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7",
+        "price": 709.21,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7 Pro",
+        "price": 1013.12,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 8",
+        "price": 793.98,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "OnePlus 9",
+        "price": 621.18,
+        "featured": false,
+        "company": "OnePlus"
+    },
+    {
+        "name": "OnePlus 10 Pro",
+        "price": 913.63,
+        "featured": true,
+        "company": "OnePlus"
+    },
+    {
+        "name": "iPhone 12",
+        "price": 209.34,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 12 Pro",
+        "price": 325.35,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 13",
+        "price": 596.08,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14",
+        "price": 775.86,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14 Pro",
+        "price": 1004.9,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 15",
+        "price": 910.93,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "Samsung Galaxy S20",
+        "price": 710.62,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S21",
+        "price": 863.26,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S22",
+        "price": 988.21,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S23",
+        "price": 982.47,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Note 20",
+        "price": 916.09,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Flip 3",
+        "price": 1169.85,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Fold 4",
+        "price": 1811.14,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Google Pixel 6",
+        "price": 636.93,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 6 Pro",
+        "price": 978.95,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7",
+        "price": 729.43,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7 Pro",
+        "price": 963.97,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 8",
+        "price": 875.28,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "OnePlus 9",
+        "price": 666.43,
+        "featured": false,
+        "company": "OnePlus"
+    },
+    {
+        "name": "OnePlus 10 Pro",
+        "price": 830.73,
+        "featured": false,
+        "company": "OnePlus"
+    },
+    {
+        "name": "iPhone 12",
+        "price": 238.95,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 12 Pro",
+        "price": 311.47,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 13",
+        "price": 585.83,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14",
+        "price": 772.98,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14 Pro",
+        "price": 908.28,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 15",
+        "price": 928.46,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "Samsung Galaxy S20",
+        "price": 724.99,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S21",
+        "price": 797.59,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S22",
+        "price": 842.66,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S23",
+        "price": 1096.27,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Note 20",
+        "price": 1023.73,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Flip 3",
+        "price": 1090.77,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Fold 4",
+        "price": 1722.48,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Google Pixel 6",
+        "price": 655.02,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 6 Pro",
+        "price": 956.55,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7",
+        "price": 674.39,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7 Pro",
+        "price": 1063.09,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 8",
+        "price": 737.61,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "OnePlus 9",
+        "price": 595.31,
+        "featured": true,
+        "company": "OnePlus"
+    },
+    {
+        "name": "OnePlus 10 Pro",
+        "price": 815.86,
+        "featured": true,
+        "company": "OnePlus"
+    },
+    {
+        "name": "iPhone 12",
+        "price": 242.99,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 12 Pro",
+        "price": 317.8,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 13",
+        "price": 542.93,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14",
+        "price": 796.37,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14 Pro",
+        "price": 901.86,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 15",
+        "price": 817.58,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "Samsung Galaxy S20",
+        "price": 748.8,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S21",
+        "price": 727.42,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S22",
+        "price": 887.21,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S23",
+        "price": 998.7,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Note 20",
+        "price": 1034.37,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Flip 3",
+        "price": 1143.54,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Fold 4",
+        "price": 1703.19,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Google Pixel 6",
+        "price": 589.3,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 6 Pro",
+        "price": 821.75,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7",
+        "price": 732.05,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7 Pro",
+        "price": 939.68,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 8",
+        "price": 782.98,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "OnePlus 9",
+        "price": 684.79,
+        "featured": true,
+        "company": "OnePlus"
+    },
+    {
+        "name": "OnePlus 10 Pro",
+        "price": 925.59,
+        "featured": false,
+        "company": "OnePlus"
+    },
+    {
+        "name": "iPhone 12",
+        "price": 246.06,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 12 Pro",
+        "price": 317.36,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 13",
+        "price": 560.78,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14",
+        "price": 799.09,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 14 Pro",
+        "price": 1055.63,
+        "featured": false,
+        "company": "Apple"
+    },
+    {
+        "name": "iPhone 15",
+        "price": 864.41,
+        "featured": true,
+        "company": "Apple"
+    },
+    {
+        "name": "Samsung Galaxy S20",
+        "price": 635.07,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S21",
+        "price": 826.85,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S22",
+        "price": 810.68,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy S23",
+        "price": 1082.71,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Note 20",
+        "price": 965.71,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Flip 3",
+        "price": 1237.33,
+        "featured": true,
+        "company": "Samsung"
+    },
+    {
+        "name": "Samsung Galaxy Z Fold 4",
+        "price": 1643.59,
+        "featured": false,
+        "company": "Samsung"
+    },
+    {
+        "name": "Google Pixel 6",
+        "price": 544.18,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 6 Pro",
+        "price": 877.13,
+        "featured": false,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7",
+        "price": 664.48,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 7 Pro",
+        "price": 913.58,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "Google Pixel 8",
+        "price": 775.76,
+        "featured": true,
+        "company": "Google"
+    },
+    {
+        "name": "OnePlus 9",
+        "price": 688.85,
+        "featured": false,
+        "company": "OnePlus"
+    },
+    {
+        "name": "OnePlus 10 Pro",
+        "price": 914.65,
+        "featured": true,
+        "company": "OnePlus"
     }
 ]

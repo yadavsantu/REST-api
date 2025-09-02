@@ -22,13 +22,13 @@ const productSchema=new mongoose.Schema(
         type:Date,
         default:Date.now()
     },
-    company:{
-        type:String,
-        enum:{
-            values:['Apple','Samsung','Dell','MI'],
-            message:`{VALUE} is not supported`
-        }
+    company: {
+    type: String,
+    enum: {
+        values: ['Apple', 'Samsung', 'Google', 'OnePlus'],
+        message: `{VALUE} is not supported`
     }
+}
 }
 );
 module.exports=mongoose.model('Product',productSchema)//collection name will be products always singular form
