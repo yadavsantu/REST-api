@@ -9,7 +9,10 @@ const getAllProducts=async(req,res)=>{
     });
 }
 const getAllProductsTesting=async(req,res)=>{
-    const myData=await ProductModel.find({company:"Apple"});
+    const myData=await ProductModel.find(req.query);
+    console.log(
+        req.query
+    );
     res.status(200).json({
         myData
     });
