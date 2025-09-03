@@ -11,7 +11,7 @@ This API provides products data with support for **search, filtering, sorting, f
 
 Custom Route:  
 ```
-/products
+/api/products
 ```
 
 ---
@@ -29,13 +29,13 @@ Custom Route:
 
 | Parameter | Description | Example |
 |-----------|-------------|---------|
-| `company` | Filter by company | `/products?company=Apple` |
-| `name` | Search by product name (case-insensitive, regex) | `/products?name=iphone` |
-| `featured` | Filter by featured status (`true`/`false`) | `/products?featured=true` |
-| `sort` | Sort by one or more fields (comma-separated) | `/products?sort=price` <br> `/products?sort=company,price` |
-| `select` | Select specific fields to return (comma-separated) | `/products?select=name,price` |
-| `page` | Pagination - page number (default: 1) | `/products?page=2` |
-| `limit` | Pagination - items per page (default: 10) | `/products?limit=5` |
+| `company` | Filter by company | `/api/products?company=Apple` |
+| `name` | Search by product name (case-insensitive, regex) | `/api/products?name=iphone` |
+| `featured` | Filter by featured status (`true`/`false`) | `/api/products?featured=true` |
+| `sort` | Sort by one or more fields (comma-separated) | `/api/products?sort=price` <br> `/api/products?sort=company,price` |
+| `select` | Select specific fields to return (comma-separated) | `/api/products?select=name,price` |
+| `page` | Pagination - page number (default: 1) | `/api/products?page=2` |
+| `limit` | Pagination - items per page (default: 10) | `/api/products?limit=5` |
 
 ---
 
@@ -43,37 +43,37 @@ Custom Route:
 
 1. **Get all products**
    ```http
-   GET /products
+   GET /api/products
    ```
 
 2. **Filter by company**
    ```http
-   GET /products?company=Apple
+   GET /api/products?company=Apple
    ```
 
 3. **Search by name**
    ```http
-   GET /products?name=iphone
+   GET /api/products?name=iphone
    ```
 
 4. **Sort by price (ascending)**
    ```http
-   GET /products?sort=price
+   GET /api/products?sort=price
    ```
 
 5. **Sort by company and price (descending)**
    ```http
-   GET /products?sort=company,-price
+   GET /api/products?sort=company,-price
    ```
 
 6. **Select only name and price fields**
    ```http
-   GET /products?select=name,price
+   GET /api/products?select=name,price
    ```
 
 7. **Pagination (page 2, 5 results per page)**
    ```http
-   GET /products?page=2&limit=5
+   GET /api/products?page=2&limit=5
    ```
 
 ---
