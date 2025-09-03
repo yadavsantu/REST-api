@@ -6,7 +6,7 @@ const getAllProducts=async(req,res)=>{
     const queryObject={};
     
 
-    const {company, name, featured, sort}=req.query;
+    const {company, name, featured, sort, select}=req.query;
     if(company){
         queryObject.company=company;
         // console.log(queryObject);
@@ -19,10 +19,14 @@ const getAllProducts=async(req,res)=>{
         queryObject.featured=featured;
     }
     let apiData=ProductModel.find(queryObject);
-    
+
     if(sort){
-        let sortFix=sort.replace(","," ");
+        let sortFix=sort.split(",").join(" ");
         apiData=apiData.sort(sortFix);
+    }
+    if(select){
+       let selectFix=select.split(",").join(" ");
+        apiData=apiData.select(selectFix);
     }
 
     console.log(queryObject);
