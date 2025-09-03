@@ -28,12 +28,18 @@ const getAllProducts=async(req,res)=>{
        let selectFix=select.split(",").join(" ");
         apiData=apiData.select(selectFix);
     }
+    
+    let page=Number(req.query.page) || 1;
+    let limit=Number(req.query.limit) ||10;
+    let skip =(page -1) *limit;
+
+
 
     console.log(queryObject);
 
-    const myData=await apiData;
+    const myData=await apiData.skip(skip).limit(limit);
     res.status(200).json({
-        myData
+        myData, nbHits: myData.length
     });
 }
 
