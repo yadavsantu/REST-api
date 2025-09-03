@@ -37,19 +37,19 @@ const getAllProducts=async(req,res)=>{
 
     console.log(queryObject);
 
-    const myData=await apiData.skip(skip).limit(limit);
+    const Products=await apiData.skip(skip).limit(limit);
     res.status(200).json({
-        myData, nbHits: myData.length
+        Products, nbHits: Products.length
     });
 }
 
 const getAllProductsTesting=async(req,res)=>{
-    const myData=await ProductModel.find(req.query).sort("price");
+    const Products=await ProductModel.find(req.query).sort("price");
     console.log(
         req.query
     );
     res.status(200).json({
-        myData
+        Products
     });
 }
 module.exports={getAllProducts,getAllProductsTesting};  
