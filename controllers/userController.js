@@ -28,4 +28,21 @@ const getAllUsers=async(req,res)=>{
         res.status(500).json("Error in fetching users");
     }
 }
-module.exports={userCreate,getAllUsers};
+
+const updateUser=async(req,res)=>{
+    try{
+        const id=req.params.id;
+        const userExist=await User.findOne({_id: id});
+
+        if(!userExist){
+            return res.status(404).json({message:"User not found"});
+        }
+        const updateUse= await User.findByIdAndUpdate(id, req.body,{new: true});
+        res.status(201).json(updateUse);
+        console.log(updateUse);
+
+    }catch(error){
+        res.status(500).json("Error in updating user");
+    }
+}
+module.exports={userCreate,getAllUsers, updateUser};
