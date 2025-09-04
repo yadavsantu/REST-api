@@ -3,13 +3,19 @@ require('dotenv').config();
 const PORT=process.env.PORT || 8081;
 const app=express();
 const connectDB=require("./db/connect");
+const bodyParser = require('body-parser');
 
 app.use(express.json());
+app.use(bodyParser.json());
 
 const productsRoutes=require('./routes/products');
+const userRoutes=require('./routes/userRoute');
 
 //middlewares
-app.use("/api/products",productsRoutes);
+
+app.use("/api/products",productsRoutes);//route for products
+app.use("/api/user",userRoutes);//route for users
+
 
 app.get('/',
     (req,res)=>{
