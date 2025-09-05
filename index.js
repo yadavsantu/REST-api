@@ -4,17 +4,22 @@ const PORT=process.env.PORT || 8081;
 const app=express();
 const connectDB=require("./db/connect");
 const bodyParser = require('body-parser');
+const cors = require("cors");
+app.use(express.static("public"));
 
+app.use(cors()); // <-- Enable CORS for all routes
 app.use(express.json());
 app.use(bodyParser.json());
 
 const productsRoutes=require('./routes/products');
 const userRoutes=require('./routes/userRoute');
+const attractionRoutes = require("./routes/attractionRoutes");
 
 //middlewares
 
 app.use("/api/products",productsRoutes);//route for products
 app.use("/api/user",userRoutes);//route for users
+app.use("/api/v1/attractions", attractionRoutes); // Route for attractions
 
 
 app.get('/',
