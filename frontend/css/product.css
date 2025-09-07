@@ -1,0 +1,141 @@
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 2.5rem;
+      color: #222;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .controls {
+      margin: 30px auto 20px auto;
+      text-align: center;
+      background: rgba(255,255,255,0.7);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 20px 10px;
+      max-width: 700px;
+    }
+    .controls input, .controls select, .controls button {
+      margin: 0 7px 10px 7px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #b0c4de;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .controls input:focus, .controls select:focus {
+      border-color: #5e9cff;
+    }
+    .controls button {
+      background: linear-gradient(90deg, #5e9cff 0%, #67e8f9 100%);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(94,156,255,0.12);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .controls button:hover {
+      background: linear-gradient(90deg, #67e8f9 0%, #5e9cff 100%);
+      transform: scale(1.05);
+    }
+    #products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px 40px 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.6);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(94,156,255,0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+      padding: 24px 18px;
+      transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #e3eafc;
+      cursor: pointer;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #5e9cff 0%, #67e8f9 100%);
+      opacity: 0.13;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .card:hover {
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 8px 32px rgba(94,156,255,0.23), 0 3px 12px rgba(0,0,0,0.13);
+      background: rgba(255,255,255,0.85);
+    }
+    .card h2 {
+      margin: 10px 0 5px;
+      font-size: 1.3rem;
+      color: #222;
+      font-weight: 700;
+      z-index: 1;
+      position: relative;
+      letter-spacing: 1px;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #444;
+      margin: 6px 0;
+      z-index: 1;
+      position: relative;
+    }
+    .card p b {
+      color: #5e9cff;
+      font-weight: 600;
+    }
+    .pagination {
+      text-align: center;
+      margin: 30px 0 40px 0;
+    }
+    .pagination button {
+      margin: 0 8px;
+      padding: 8px 18px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(90deg, #5e9cff 0%, #67e8f9 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(94,156,255,0.12);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .pagination button:hover {
+      background: linear-gradient(90deg, #67e8f9 0%, #5e9cff 100%);
+      transform: scale(1.07);
+    }
+    .pagination span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #5e9cff;
+      margin: 0 10px;
+    }
+    @media (max-width: 700px) {
+      #products {
+        grid-template-columns: 1fr;
+        padding: 10px 5px 40px 5px;
+      }
+      .controls {
+        padding: 12px 5px;
+      }
+    }

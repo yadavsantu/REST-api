@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products API</title>
+  <link rel="stylesheet" href="css/product.css">
+  
+</head>
+<body>
+  <h1>Electronics Items</h1>
+  <div class="controls">
+    <select id="company">
+      <option value="">All Companies</option>
+      <option value="Apple">Apple</option>
+      <option value="Samsung">Samsung</option>
+      <option value="Google">Google</option>
+      <option value="OnePlus">OnePlus</option>
+    </select>
+    <input type="text" id="name" placeholder="Search by name">
+    <select id="featured">
+      <option value="">Featured?</option>
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select>
+    <input type="text" id="select" placeholder="Fields (e.g. name,price)">
+    <input type="text" id="sort" placeholder="Sort (e.g. price,-rating)">
+    <button onclick="fetchProducts(1)">Search</button>
+  </div>
+  <div id="products"></div>
+  <div class="pagination">
+    <button onclick="prevPage()">Prev</button>
+    <span id="pageNum">1</span>
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    let lastPage = false;
+
+    function buildQuery(page = 1) {
+      const company = document.getElementById('company').value;
+      const name = document.getElementById('name').value;
+      const featured = document.getElementById('featured').value;
+      const select = document.getElementById('select').value;
+      const sort = document.getElementById('sort').value;
+      const limit = 6; // Items per page
+
+      let query = `?page=${page}&limit=${limit}`;
+      if (company) query += `&company=${company}`;
+      if (name) query += `&name=${encodeURIComponent(name)}`;
+      if (featured) query += `&featured=${featured}`;
+      if (select) query += `&select=${encodeURIComponent(select)}`;
+      if (sort) query += `&sort=${encodeURIComponent(sort)}`;
+      return query;
+    }
+
+    function fetchProducts(page = 1) {
+      currentPage = page;
+      document.getElementById('pageNum').textContent = page;
+      const query = buildQuery(page);
+      fetch("https://rest-api-12c0.onrender.com/api/products" + query)
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById("products");
+          container.innerHTML = "";
+          if (!data.Products || data.Products.length === 0) {
+            container.innerHTML = "<p>No products found.</p>";
+            lastPage = true;
+            return;
+          }
+          lastPage = data.Products.length < 6; // If less than limit, it's last page
+          data.Products.forEach(product => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+              <h2>${product.name || ""}</h2>
+              <p><b>Company:</b> ${product.company || ""}</p>
+              <p><b>Price:</b> ₹${product.price || ""}</p>
+              <p><b>Featured:</b> ${product.featured ? "Yes" : "No"}</p>
+              <p><b>Rating:</b> ${product.rating || ""}</p>
+            `;
+            container.appendChild(card);
+          });
+        })
+        .catch(err => {
+          document.getElementById("products").innerHTML = "<p>Error fetching products.</p>";
+          console.error("Error fetching products:", err);
+        });
+    }
+
+    function nextPage() {
+      if (!lastPage) fetchProducts(currentPage + 1);
+    }
+    function prevPage() {
+      if (currentPage > 1) fetchProducts(currentPage - 1);
+    }
+
+    // Initial load
+    fetchProducts(1);
+  </script>
+</body>
+</html>
